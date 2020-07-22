@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "seed": "cat data-access-layer/00a-schema.sql | psql postgres && cat data-access-layer/00b-seed.sql | psql recipe_box",
+    "seed": "cat data-access-layer/00a-schema.sql | psql -h localhost postgres && cat data-access-layer/00b-seed.sql | psql -h localhost recipe_box",
     "start": "node server/index.js",
     "test": "mocha"
   },
