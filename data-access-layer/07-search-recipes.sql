@@ -23,3 +23,7 @@
 
 
 -- YOUR CODE HERE
+SELECT *
+FROM recipes
+WHERE lower(title) LIKE lower('%' || $1 || '%')
+ORDER BY updated DESC;
